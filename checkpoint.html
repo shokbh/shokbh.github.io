@@ -1,0 +1,41 @@
+<!-- 
+*
+* softwareDesign.html
+* CS2550 Spring 2017 
+* Assn 4
+* Writen By: Sophy Hok
+*
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Check Point | Sudoku </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header class="header">
+		<img src="Sudokufun.png">
+		<nav>
+			<a href="index.html" target="_blank">Home</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="game.html">Game</a>
+		</nav>
+	</header>
+	<br><br>
+	<section>
+	<h2>Game Check Point</h2>
+	<p>This is the game check point which explains how my sudoku game is progressing</p>
+	<h3>Logic</h3>
+	<p>In my gameState i have one solutionGrid which is an array of the game solution. Then I have 4 others grid which given to the game dificulty level, easy, medium, hard and impossible. The game will give players some numbers in the grid and players then fill in the missing one. I put all the given numbers to negative and the players input will be zero before playing. That way I can distinguish which one is given and which one is input. I will update the level grid from player input and then compare the array with the solution array. There is a timer that will start when the game start. There also a Hint button for player to check how they are progressing. Besides, I will also check if player enter digit or not.</p>
+	<h3>What have I implement?</h3>
+	<p>genOnject(): I have created the genObject() that will generate output to the grid in the view to let players start playing. Players can choose game level from the select options then call the getSquare() to set get the data from the model grid. And the Start button will run the game.</p>
+	<p>timer(): I have implement this when the page start but it isn't quite right yet. Will improve it.</p>
+	<p>hint(): I haven't implement this yet.</p>
+	<p>isValidDigit(): I haven't implement yet.</p>
+	<p>isGameOver(): Started working on getting players input.</p>
+	</section>
+	<footer>
+		&copy; Sophy Hok
+	</footer>
+</body>
+</html>

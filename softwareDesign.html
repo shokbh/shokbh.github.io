@@ -1,0 +1,100 @@
+<!-- 
+*
+* softwareDesign.html
+* CS2550 Spring 2017 
+* Assn 4
+* Writen By: Sophy Hok
+*
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Design | Sudoku </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header class="header">
+		<img src="Sudokufun.png">
+		<nav>
+			<a href="index.html" target="_blank">Home</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="game.html">Game</a>
+		</nav>
+	</header>
+	<br><br>
+	<section>
+		<h1>Preliminary Software Design</h3>
+		<p>This is my Sudoku game software design. </p>
+
+		<h2>Model</h3>
+		<p>
+			<pre>
+	var gameState = {
+    	"grid": [[0,5,7,4,0,0,2,0,3],[0,8,4,0,6,2,0,9,0],[2,1,0,7,0,3,0,4,6],[4,7,0,0,0,0,0,0,1],[0,0,0,2,0,5,0,3,0],[8,0,3,0,4,0,0,6,5],[1,0,0,0,2,0,8,0,9],
+    		[7,0,2,0,5,0,6,0,4],[5,0,0,0,0,4,0,7,0]],
+    	"solutionGrid":  [[6,5,7,4,9,1,2,8,3],[3,8,4,5,6,2,1,9,7],[2,1,9,7,8,3,5,4,6],[4,7,5,8,3,6,9,2,1],[9,6,1,2,7,5,4,3,8],[8,2,3,1,4,9,7,6,5],
+    		[1,4,6,3,2,7,8,5,9],[7,3,2,9,5,8,6,1,4],[5,9,8,6,1,4,3,7,2]],
+    	"checkNumber": false,
+    	"timer": 0,
+    	"newGame": false,
+    	"gameover": false,
+    	"difficulty": ["easy", "meduim", "hard", "impossible"]
+	}
+			</pre>
+		</p>
+
+		<p>The above object is the main game object. Each property has the meaning as the following:</p>
+		<p>
+			<b>grid[][]: 2D array of number</b> <br/>use for the play grid. It has already some given value to the game. It will continuous to change as the game progress. There are 9 rows and each row has 9 elements. A total of 81 elements.
+		</p>
+		<p>
+			<b>solutionGrid[][]: 2D array of number</b> <br/>this is the game solution. this will be used to compare with the play grid to check the state of the player.
+		</p>
+		<p>
+			<b>checkNumber: boolean</b> <br/>validate only number is allowed as input. This will be used in isValidDigit().
+		</p>
+		<p>
+			<b>timer: number</b> <br/>timer to track how long the game has been playing. This will be implement in the function trackTime().
+		</p>
+		<p>
+			<b>newGame:</b> <br/>used for newGame().
+		</p>
+		<p>
+			<b>gameOver:</b> <br/>if all grid hasn't been filled, this is false. Used in isGameOver().
+		</p>
+		<p>
+			<b>dificulty:</b> <br/>how many given grid shoud display to the player.
+		</p>
+
+		<h2>Functions/Methods</h3>
+
+		<p>
+			<b>getSquare()</b> <br/>get grid value from the model object.
+		</p>
+		<p>
+			<b>trackTime()</b> <br/>track time of game being played. Timer will start at 0 when the game started. It doesn't have a limit so player can play as long as they want.
+		</p>
+		<p>
+			<b>isValidDigit(digit)</b> <br/>check to allow only number input, no letter, symbol are allowed.
+		</p>
+		<p>
+			<b>isGameOver()</b> check if all cell is filled and corrected. If return true, timer will stop and check for the result.
+		</p>
+		<p>
+			<b>difficulty()</b> <br/>set diffculty level of the game, easy, meduim, hard, of users choice. This will choose which givenGrid to start.
+		</p>
+		<p>
+			<b>newGame()</b> <br/>start new game and clear all the users input.
+		</p>
+		<p>
+			<b>clearAll()</b> <br/>clear all player input of the current game.
+		</p>
+		<p>
+			<b>hint()</b> <br/>tell player if they are doing right.
+		</p>
+	</section>
+	<footer>
+		&copy; Sophy Hok
+	</footer>
+</body>
+</html>

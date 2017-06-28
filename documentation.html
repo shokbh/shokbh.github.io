@@ -1,0 +1,75 @@
+<!-- 
+*
+* documentation.html
+* CS2550 Spring 2017 
+* Final Project
+* Writen By: Sophy Hok
+*
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Documentation | Sudoku </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header class="header">
+		<img src="Sudokufun.png">
+		<nav>
+			<a href="index.html" target="_blank">Home</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="game.html">Game</a>
+		</nav>
+	</header>
+	<br><br>
+	<section>
+		<h1>Documentation</h3>
+		<p>This is my Sudoku game Documentation. </p>
+
+		<h2>Game Logic</h3>
+		<p>
+			When the game page loaded, players have to choose the game level from the select box and click start button to start the game, by default if no level chosen it will be the easy state. At the same time, the timer will start running. During playing, when player click the Hint button it will tell players which cell is wrong by showing row[]col[] format. After fill up the grid player have to click the submit button to stop the game and check whether the win or lose, this also show the total time player take to play the game. The start button can be clicked anytime and the new game state is generate with time zero.
+		</p>
+		<p>The Show Solution button will load the solutionGrid from sokudoFunJSON.json and you can test the game with this solution. I also have a link at the bottom of game.js page for the solution grid. It also load from the same .json file.</p>
+		<h2>Implement</h3>
+		<p>
+			The game grid is loaded from the JSON file name sudokuFunJSON.json. It depends on the level selected to load the right grid. The harder the level the lesser given numbers. 
+		</p>
+		<p>view.js</p>
+		<p>
+			<b>createTable():</b> This will create game table 9x9. It also uses CSS to style in grid.
+		</p>
+		<p>
+			<b>genObject():</b> This will call function getSquare() that generates grid values that load from local .json file. These value is given value and cannot be edit. This also provide input box for those cells that are not given.
+		</p>
+		<p>
+			<b>clickableGrid():</b> Makes the given grid value bigger and bolder and clicked.
+		</p>
+		<p>
+			<b>testAge():</b> Retrieve input from the textbox and show it next to the box. Just a simple age question.
+		</p>
+		<p>
+			<b>clearAll():</b> Reset the table grid to its original value and delete all user inputs. This function will genObject().
+		</p>
+		<p>model.js</p>
+		<p>
+			<b>getSquare():</b> accept row, col as parameter and use XMLHttpRequest to load .json file and return the grid value.
+		</p>
+		<p>
+			<b>timer()</b> use for trackting time, how long the player take. This will be in format for minute and second. Timer is call in genObject() and isGameover() with the use of setInterval() and clearInterval().
+		</p>
+		<p>
+			<b>isGameover():</b> check the game is finished or not. First it will check if all grid are filled. If not all, it will return. If all is filled, it then takes all the grid input save to value[][] array then compare the array with the solutionGrid[][] to see if all numbers are match. If all is match, it give alert() that the player win and show the timer. If not match it will still end the game and the player lose. Timer will be clear and stop here.
+		</p>
+		<p>
+			<b>hint():</b> check if all the filled grid is match with the solutioGrid. If not it will alert() and give the cordination of which row[]col[] is wrong.
+		</p>
+
+	</section>
+	<footer>
+		&copy; Sophy Hok
+	</footer>
+</body>
+</html>
+
+

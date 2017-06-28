@@ -1,0 +1,173 @@
+/* 
+* 
+* style.css
+* CS2550 Spring 2017 
+* Assn 5
+* Writen By: Sophy Hok
+*
+*/
+
+body{
+	font-family: sans-serif, arial, courier; 
+	width: 1200px;
+	margin: 0px auto;
+}
+
+header {
+	background-color: lightgray;
+}
+
+header img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+header nav {
+	padding: 20px;
+	text-align: right;
+}
+
+header nav a{
+	font-size: 20px;
+	font-stretch: 5px;
+}
+
+aside {
+	background-color: lightblue;
+	margin-right: 1100px;
+}
+
+a{
+	color: #FF1493;
+
+}
+a:hover{
+	color: red;
+}
+
+tr td {
+    border: 1px dotted black;
+    font-size: auto;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+}
+
+pre {
+	font-size: 15px;
+}
+#funDiv{
+	position: relative; top: 0px; left: 100px;
+}
+#funImg{
+	position: absolute; top: 0px; left: 70px;
+}
+
+.move {
+	position: absolute; 
+	top: 300px; 
+	left: auto; 
+}
+#table{
+    border-collapse: collapse;
+    /*margin-left: auto;
+    margin-right: auto;
+    */
+    margin: auto;
+    color: darkblue;
+    font-weight: bolder;
+    font-size: 20px;
+    display: table;
+}
+
+.sDesignLink {
+	color: limegreen;
+}
+
+.givenGrid {
+	color: brown;
+}
+
+.largeText{
+	font-size: 30px;
+}
+/*Stlye for table border*/
+.c12, .c22, .c32, .c42, .c52, .c62, .c72, .c82, .c92 {
+	border-right: 2px solid blue;
+}
+
+.c15, .c25, .c35, .c45, .c55, .c65, .c75, .c85, .c95 {
+	border-right: 2px solid blue;
+}
+
+.c30, .c31, .c32, .c33, .c34, .c35, .c36, .c37, .c38 {
+	border-bottom: 2px solid blue;
+}
+
+.c60, .c61, .c62, .c63, .c64, .c65, .c66, .c67, .c68 {
+	border-bottom: 2px solid blue;
+}
+
+.c10, .c11, .c12, .c13, .c14, .c15, .c16, .c17, .c18 {
+	border-top: 2px solid blue;
+}
+
+.c10, .c20, .c30, .c40, .c50, .c60, .c70, .c80, .c90 {
+	border-left: 2px solid blue;
+}
+
+.c18, .c28, .c38, .c48, .c58, .c68, .c78, .c88, .c98 {
+	border-right: 2px solid blue;
+}
+
+.c90, .c91, .c92, .c93, .c94, .c95, .c96, .c97, .c98 {
+	border-bottom: 2px solid blue;
+}
+
+#table input {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	height: 100%;
+	color: brown;
+	background-color: transparent;
+    border: 0px solid;
+    width: 40;
+    height: 40px;
+}
+
+.center {
+	margin: 0px auto;
+	display: table;
+}
+
+
+button.hint {
+	background-color: limegreen;
+}
+
+button.test{
+	background-color: orange;
+	padding: 10px 20px;
+    border-radius: 10px;
+    width: 70px;
+    margin: 10px;
+}
+button {
+	background-color: pink;
+	/*display: block;*/
+	padding: 10px 20px;
+    border-radius: 10px;
+    width: 100px;
+    margin: 10px;
+}
+.loginSpace{
+	text-align: right;
+}
+footer {
+	text-align: center;
+	color: #FF1493;
+	padding: 15px;
+	background-color: lightgrey;
+
+}

@@ -1,0 +1,75 @@
+<!-- 
+*
+* index.html
+* CS2550 Spring 2017 
+* Assn 6
+* Writen By: Peng Sophy Hok
+*
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home | Sudoku </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<img src="Sudokufun.png">
+		<nav>
+			<a href="index.html">Home</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="game.html" target="_blank">Game</a>
+		</nav>
+	</header>
+	<div class="loginSpace">
+		<label>Username:</label>
+		<input type="username" name="username" id="username">
+		<br>
+		<label>Password:&nbsp;</label>
+		<input type="password" name="password" id="password">
+		<br><span id="checkInput"></span>
+		<input type="submit" name="submit" onclick="loadSyncPost()" >
+	</div>
+
+	<section>
+		<h1>Sudoku</h1>
+		<p>
+			Sudoku is fun because it requires the player patient and deep thought. It is good to get your brain to do some exercise.
+		</p>
+		<h3><a href="game.html"  class="sDesignLink" target="_blank"> Click here to play</a></h3>
+		<h3><a href="softwareDesign.html" class="sDesignLink" target="_blank"> Click here for Software Design</a></h3>
+		<h3><a href="documentation.html" class="sDesignLink" target="_blank"> Click here for Game Documentation</a></h3>
+
+		<h3>How To Play</h3>
+		<p>
+			It is easy to play the game. From number 1 to 9 in a 9x9 table. You need to enter a number in each column without repeating it vertically or horizontally or even in the table itself. When you finish the game, you will see that all rows no matter what direction, it will contains each number without any repetition. 
+		</p>
+		
+		<h3>More About Sudoku</h3>
+		<p>If you want to know in dept about Sudoku please following the link below:</p>
+		<a href="http://www.instructables.com/id/Sudoku%3Asolving-it-for-beginners-and-the-expirience/" target="_blank">www.instructables.com</a>
+		<br>
+		<a href="https://en.wikipedia.org/wiki/Sudoku" target="_blank">www.wikipedia.com</a>
+		<br>
+		<a href="http://www.websudoku.com/" target="_blank">www.websudoku.com</a>
+		<br>
+		<br>
+		<canvas id="myCanvas" width="500" height="100" style="border:2px solid pink;">
+			Your browser does not support the HTML5 canvas tag.</canvas>
+		<br>
+		
+	</section>
+	<footer>
+		&copy; Sophy Hok
+	</footer>
+	<script src="login.js"></script>
+
+	<!--This code is from w3schools.com -->
+	<script>
+		var c = document.getElementById("myCanvas");
+		var context = c.getContext("2d");
+		context.font = "30px Arial";
+		context.strokeText("Hey! Have Fun Playing Sudoku",10,50);
+</script>
+</body>
+</html>
